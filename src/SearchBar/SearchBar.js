@@ -28,7 +28,7 @@ const SearchBar = () => {
 				</p>
 
 				<div className={`button is-medium ${styles['search-button']}`}>
-					<span className='icon is-small'>
+					<span className={`icon is-small ${styles['search-icon']}`}>
 						<i className='fas fa-search'></i>
 					</span>
 				</div>
