@@ -2,6 +2,16 @@ import React from 'react'
 import styles from './SearchResultsSummary.module.css'
 
 const SearchResultsSummary = (props) => {
+	let resultStats = null
+
+	if (props.total && props.totalShown) {
+		resultStats = (
+			<p>
+				Showing 1-{props.totalShown} out of {props.total} results
+			</p>
+		)
+	}
+
 	return (
 		<div className={styles.container}>
 			<div className={styles['search-summary']}>
@@ -9,7 +19,7 @@ const SearchResultsSummary = (props) => {
 					<strong>{props.term}</strong> {props.location}
 				</h1>
 
-				<p>Showing 1-20 out of {props.total} results</p>
+				{resultStats}
 			</div>
 
 			<div className={styles.filters}>

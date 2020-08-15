@@ -10,7 +10,12 @@ const NavBar = (props) => {
 			<Link to='/'>
 				<img src={logo} className={styles.logo} alt={logo} />
 			</Link>
-			<SearchBar small term={props.termParam} location={props.locationParam} />
+			<SearchBar
+				small
+				term={props.termParam}
+				location={props.locationParam}
+				search={props.search}
+			/>
 			<button className={`button ${styles['nav-button']}`}>Sign In</button>
 			<button className={`button ${styles['nav-button']}`}>Register</button>
 		</div>
