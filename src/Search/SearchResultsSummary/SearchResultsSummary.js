@@ -9,7 +9,7 @@ const SearchResultsSummary = (props) => {
 					<strong>{props.term}</strong> {props.location}
 				</h1>
 
-				<p>Showing 1-20 out of 543 results</p>
+				<p>Showing 1-20 out of {props.total} results</p>
 			</div>
 
 			<div className={styles.filters}>
