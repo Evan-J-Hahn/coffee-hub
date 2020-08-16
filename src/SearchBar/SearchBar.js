@@ -19,7 +19,7 @@ const SearchBar = (props) => {
 		<form onSubmit={submit}>
 			<div className='field has-addons'>
 				<div className='control'>
-					<div className={`button is-static ${sizeClass}`}>Find</div>
+					<button className={`button is-static ${sizeClass}`}>Find</button>
 				</div>
 				<p className='control'>
 					<input

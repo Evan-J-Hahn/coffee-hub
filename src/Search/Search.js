@@ -19,7 +19,9 @@ const Search = () => {
 	] = useBusinessSearch(term, locationParam)
 
 	if (!term || !locationParam) {
-		history.push('/')
+		setTimeout(() => {
+			history.push('/')
+		}, 500)
 	}
 
 	const search = (term, location) => {

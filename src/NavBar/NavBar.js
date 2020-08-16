@@ -12,8 +12,8 @@ const NavBar = (props) => {
 			</Link>
 			<SearchBar
 				small
-				term={props.termParam}
-				location={props.locationParam}
+				term={props.term}
+				location={props.location}
 				search={props.search}
 			/>
 			<button className={`button ${styles['nav-button']}`}>Sign In</button>
