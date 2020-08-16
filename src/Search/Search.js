@@ -18,6 +18,10 @@ const Search = () => {
 		performSearch,
 	] = useBusinessSearch(term, locationParam)
 
+	if (!term || !locationParam) {
+		history.push('/')
+	}
+
 	const search = (term, location) => {
 		const encodedTerm = encodeURI(term)
 		const encodedLocation = encodeURI(location)

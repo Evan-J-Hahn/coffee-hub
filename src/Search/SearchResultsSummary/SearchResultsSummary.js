@@ -43,13 +43,6 @@ const SearchResultsSummary = (props) => {
 					</span>
 					<span>Open Now</span>
 				</button>
-
-				<button className='button'>
-					<span className='icon'>
-						<i className='fas fa-dollar-sign' />
-					</span>
-					<span>Cash Back</span>
-				</button>
 			</div>
 		</div>
 	)
