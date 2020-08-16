@@ -23,7 +23,11 @@ const SearchResult = ({ business }) => {
 	return (
 		<div className={styles['search-result']}>
 			<img
-				src={business.image_url}
+				src={
+					business.image_url
+						? business.image_url
+						: 'https://via.placeholder.com/210'
+				}
 				alt='business'
 				className={styles['business-image']}
 			/>

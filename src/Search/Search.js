@@ -7,7 +7,7 @@ import useReactRouter from 'use-react-router'
 import { useBusinessSearch } from '../Hooks/yelp-api/UseBusinessSearch'
 
 const Search = () => {
-	const { location } = useReactRouter()
+	const { location, history } = useReactRouter()
 	const params = new URLSearchParams(location.search)
 	const term = params.get('find_desc')
 	const locationParam = params.get('find_loc')
@@ -19,6 +19,11 @@ const Search = () => {
 	] = useBusinessSearch(term, locationParam)
 
 	const search = (term, location) => {
+		const encodedTerm = encodeURI(term)
+		const encodedLocation = encodeURI(location)
+
+		history.push(`/search?find_desc=${encodedTerm}&find_loc=${encodedLocation}`)
+
 		performSearch({ term, location })
 	}
 
